@@ -18,5 +18,11 @@ celulares = [Celular Samsung [Bateria 4000,Tela 5.5],
 
 celular = Celular Samsung [Bateria 400,Tela 5.5]
 
+doisPontoCinco :: [Int] -> Int
+doisPontoCinco xs = (last.reverse) xs
 
 
+tri 1 = 1
+tri 2 = 1
+tri 3 = 1
+tri x = foldl (+) 0 [tri x | x <-[(x-1)..(x-3)]]
